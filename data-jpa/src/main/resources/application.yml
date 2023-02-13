@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/datajpa
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # 시작할때 드랍하고 크리에이트, 끝나면 테이블이 남아있음
+    properties:
+      hibernate:
+        # show_sql: true # 콘솔에 로그남김
+        format_sql: true # 쿼리가 한줄이아니라 이쁘게나옴
+
+logging.level:
+  org.hibernate.SQL: debug # 로그파일에 로그남김
+  org.hibernate.type: trace # 파라미터 바인딩할때 파라미터도 보임
